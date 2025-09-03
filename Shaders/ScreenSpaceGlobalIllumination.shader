@@ -798,7 +798,7 @@ Shader "Hidden/Lighting/ScreenSpaceGlobalIllumination"
                     discard;
 
             #if defined(_USE_RENDERING_LAYERS)
-                uint meshRenderingLayers = SampleSceneRenderingLayer(screenUV);
+                uint meshRenderingLayers = LoadSceneRenderingLayer(screenUV);
                 if(!IsMatchingLightLayer(_IndirectDiffuseRenderingLayers, meshRenderingLayers))
                     discard;
             #endif
